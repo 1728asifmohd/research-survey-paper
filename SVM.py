@@ -1,0 +1,26 @@
+import numpy as np
+from matplotlib import pyplot as plt
+
+# data points
+
+X=np.array([
+    [-2,4,-1],
+    [4,1,-1],
+    [1,6,-1],
+    [2,4,-1],
+    [6,2,-1]
+	]) 
+
+# Associated labels
+
+Y=([-1,-1,1,1,1])
+
+for d,sample in enumerate(X):
+	if d<2:
+		plt.scatter(sample[0],sample[1],s=120,marker='_',linewidth=2)
+	else:
+		plt.scatter(sample[0],sample[1],s=120,marker='+',linewidth=2)
+
+#plotting in 2D space
+
+plt.plot([-2,6],[6,0.5])
